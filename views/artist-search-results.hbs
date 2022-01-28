@@ -1,0 +1,21 @@
+<div class="index-container">
+  {{#each artist}}
+    <h3 class="card-title">{{this.name}}</h3>
+
+    {{#if this.images}}
+      {{#with images.[0]}}
+        <img
+          src="{{this.url}}"
+          alt="Picture"
+          class="align-self-center mr-3"
+          height="200"
+          width="150"
+        />
+      {{/with}}
+    {{/if}}
+
+    
+    <a href="/albums/{{this.id}}">View Albums</a>
+
+  {{/each}}
+</div>
